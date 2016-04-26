@@ -1,8 +1,14 @@
+.job{
+  h1{
+    text-align: center;
+  }
+
 .jtList{
   -webkit-padding-start: 0;
   width: 80%;
   margin: 15px auto;
-  padding: 0;
+  // padding: 0;
+
   &--row{
     list-style: none;
     display: block;
@@ -10,8 +16,23 @@
     background-color: #ddd;
     line-height: 1.5;
     padding: 10px;
-    &:nth-child(even){
-      background-color: #eee;
+
+  }
+  li:nth-of-type(odd){
+    background-color: #eee;
+  }
+}
+.buttons{
+  display: block;
+  text-align: center;
+    .linkButton{
+      display:inline-block;
+      margin-right: 10px;
+    }
+    .goBackButton{
+      background-color: #3d6663;
+      display: inline-block;
+      margin-left: 10px;
     }
   }
 }

@@ -57,7 +57,7 @@ a:-webkit-any-link {
     clear: both;
     background-color: #ddd;
     line-height: 1.5;
-    padding: 10px; }
+    padding: 10px 20px; }
     .myJobs .jtList--row--item1 {
       display: inline-block;
       width: 25%; }
@@ -99,20 +99,33 @@ a:-webkit-any-link {
 .myJobs .Saved {
   background-color: #EC971F; }
 
-.jtList {
+.job h1 {
+  text-align: center; }
+
+.job .jtList {
   -webkit-padding-start: 0;
   width: 80%;
-  margin: 15px auto;
-  padding: 0; }
-  .jtList--row {
+  margin: 15px auto; }
+  .job .jtList--row {
     list-style: none;
     display: block;
     clear: both;
     background-color: #ddd;
     line-height: 1.5;
     padding: 10px; }
-    .jtList--row:nth-child(even) {
-      background-color: #eee; }
+  .job .jtList li:nth-of-type(odd) {
+    background-color: #eee; }
+
+.job .buttons {
+  display: block;
+  text-align: center; }
+  .job .buttons .linkButton {
+    display: inline-block;
+    margin-right: 10px; }
+  .job .buttons .goBackButton {
+    background-color: #3d6663;
+    display: inline-block;
+    margin-left: 10px; }
 
 .addJob {
   margin-left: auto;

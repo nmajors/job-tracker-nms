@@ -2,14 +2,18 @@
 <div class = "job">
   <h1>LOOK AT THIS JOB</h1>
   <ul class="jtList">
-    <li class="jtList--row"><span class="bold">Job Title: </span><span> {{jobCtrl.job.JobTitle}}</span></li>
-    <li class="jtList--row"><span class="bold">Company Name: </span> <span>{{jobCtrl.job.CompanyTitle}}</span></li>
-    <li class="jtList--row"><span class="bold">Location: </span> <span> {{jobCtrl.job.Address}}</span></li>
-    <li class="jtList--row"><span class="bold">Job Description: </span> <span>{{jobCtrl.job.Description}}</span></li>
-    <li class="jtList--row"><span class="bold">Phone number: </span> <span>{{jobCtrl.job.PhoneNumber}}</span></li>
-    <li class="jtList--row"><span class="bold">Website: {{jobCtrl.job.url}}</span></li>
-    <li class="jtList--row" ng-repeat="interview in jobCtrl.interviews"><span class="bold"><span> Interview scheduled for: </span>{{interview.Date.split("(")[1].split(")")[0] | date  }}</span></li>
-    <a ui-sref="my_jobs">Go back to your list of jobs</a>
+    <!--Todo: figure out alternating li colors with hidden elements-->
+    <li class="jtList--row" ng-hide="jobCtrl.job.JobTitle===null"><span class="bold">Job Title: </span><span> {{jobCtrl.job.JobTitle}}</span></li>
+    <li class="jtList--row" ng-hide="jobCtrl.job.CompanyTitle===null"><span class="bold">Company Name: </span> <span> {{jobCtrl.job.CompanyTitle}}</span></li>
+    <li class="jtList--row" ng-hide="jobCtrl.job.Address===null"><span class="bold">Location: </span> <span> {{jobCtrl.job.Address}}</span></li>
+    <li class="jtList--row" ng-hide="jobCtrl.job.Description===null"><span class="bold">Job Description: </span> <span> {{jobCtrl.job.Description}}</span></li>
+    <li class="jtList--row" ng-hide="jobCtrl.job.PhoneNumber===null"><span class="bold">Phone number: </span> <span> {{jobCtrl.job.PhoneNumber}}</span></li>
+    <li class="jtList--row" ng-hide="jobCtrl.job.Url===null"><span class="bold">Website: {{jobCtrl.job.Url}}</span></li>
+    <li class="jtList--row" ng-repeat="interview in jobCtrl.interviews"><span class="bold"> Interview scheduled for: </span> {{interview.Date.split("(")[1].split(")")[0] | date  }}</li>
   </ul>
-<a ui-sref="add_interview({ Id: jobCtrl.id })"><div class="linkButton">Add Interview</div></a>
+  <div class="buttons">
+    <a ui-sref="add_interview({ Id: jobCtrl.id })"><div class="linkButton">Add Interview</div></a>
+  <a ui-sref="my_jobs"><div class="linkButton goBackButton">Jobs List</div></a>
+
+</div>
 </div>
