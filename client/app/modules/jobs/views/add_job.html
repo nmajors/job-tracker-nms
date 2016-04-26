@@ -1,0 +1,21 @@
+
+<div class="addJob">
+  <h1>ADD A JOB, DUDE</h1>
+  <form ng-submit="addJobCtrl.addJob()">
+    <div class="addJobInput">
+      <h4>Job Title</h4>
+      <input class="textbox" type="text" placeholder="Job title" ng-model="addJobCtrl.jobTitle">
+      <!-- <span class="textboxCaption">Name that job</span> -->
+      <h4>Company Name</h4>
+      <input class="textbox" type="text" placeholder="Company name" ng-model="addJobCtrl.companyTitle">
+      <!-- <span class="textboxCaption">Name that place</span> -->
+      <h4>Job Description</h4>
+      <textarea rows = "4" class="textbox" id="descriptionInput" type="textarea" placeholder="Job Description" ng-model="addJobCtrl.description">
+      </textarea>
+      <!-- <span class="textboxCaption">Describe that job</span> -->
+      <h4>Address</h4>
+      <input class="AddressTextbox" type="street-address" placeholder="Address" ng-model="addJobCtrl.Address">
+    </div>
+    <input class="submitButton" type="submit" value="Add Job">
+  </form>
+</div>

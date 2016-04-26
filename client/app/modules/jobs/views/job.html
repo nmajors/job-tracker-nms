@@ -1,0 +1,15 @@
+
+<div class = "job">
+  <h1>LOOK AT THIS JOB</h1>
+  <ul class="jtList">
+    <li class="jtList--row"><span class="bold">Job Title: </span><span> {{jobCtrl.job.JobTitle}}</span></li>
+    <li class="jtList--row"><span class="bold">Company Name: </span> <span>{{jobCtrl.job.CompanyTitle}}</span></li>
+    <li class="jtList--row"><span class="bold">Location: </span> <span> {{jobCtrl.job.Address}}</span></li>
+    <li class="jtList--row"><span class="bold">Job Description: </span> <span>{{jobCtrl.job.Description}}</span></li>
+    <li class="jtList--row"><span class="bold">Phone number: </span> <span>{{jobCtrl.job.PhoneNumber}}</span></li>
+    <li class="jtList--row"><span class="bold">Website: {{jobCtrl.job.url}}</span></li>
+    <li class="jtList--row" ng-repeat="interview in jobCtrl.interviews"><span class="bold"><span> Interview scheduled for: </span>{{interview.Date.split("(")[1].split(")")[0] | date  }}</span></li>
+    <a ui-sref="my_jobs">Go back to your list of jobs</a>
+  </ul>
+<a ui-sref="add_interview({ Id: jobCtrl.id })"><div class="linkButton">Add Interview</div></a>
+</div>
